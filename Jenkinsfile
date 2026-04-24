@@ -19,6 +19,12 @@ pipeline {
             }
         }
 
+        stage('Before Delivery') {
+            steps {
+                sh 'echo "Pipeline is complete!!"'
+            }
+        }
+
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
@@ -27,10 +33,6 @@ pipeline {
             }
         }
 
-        stage('Final') {
-            steps {
-                sh 'echo "Pipeline is complete!!"'
-            }
-        }
+        
     }
 }
