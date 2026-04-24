@@ -21,7 +21,7 @@ pipeline {
 
         stage('Before Delivery') {
             steps {
-                sh 'echo "Only for cicd Branch"'
+                sh 'echo "Only for cicd1 Branch"'
             }
         }
     }
