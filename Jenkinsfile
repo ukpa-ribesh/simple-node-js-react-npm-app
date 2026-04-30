@@ -54,7 +54,8 @@ pipeline {
                             npm --version && \
                             git --version && \
                             docker --version && \
-                            gitleaks version
+                            gitleaks version && \
+                            sonar-scanner -v
                 '''
             }
         }
