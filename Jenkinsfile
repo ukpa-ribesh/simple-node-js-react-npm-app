@@ -2,7 +2,7 @@ pipeline {
 
     agent {
         docker {
-            image rentalbux-ci-agent:latest'
+            image 'rentalbux-ci-agent:latest'
             args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
