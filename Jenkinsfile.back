@@ -1,11 +1,6 @@
 pipeline {
 
-    agent {
-        docker {
-            image rentalbux-ci-agent:latest'
-            args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    }
+    agent any
 
     tools {
         nodejs 'nodejs-25-9-0'
