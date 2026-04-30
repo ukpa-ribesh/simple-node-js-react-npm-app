@@ -25,7 +25,7 @@ pipeline {
                     sh '''
                         echo "Running GitLeaks Scan....."
                         BASE=$(git rev-parse HEAD~5)
-                        gitleaks detect --source . --commit-from $BASE --commit-to HEAD
+                        gitleaks detect source --source . --log-opts="-10" -r gitleaks-report.json -f json
                     '''
                 }
             }
@@ -48,6 +48,14 @@ pipeline {
         stage('Before Delivery') {
             steps {
                 sh 'echo "Only for cicd1 Branch"'
+                sh '''
+                    echo "=== Installed Tools ===" && \
+                            node --version && \
+                            npm --version && \
+                            git --version && \
+                            docker --version && \
+                            gitleaks version
+                '''
             }
         }
     }
