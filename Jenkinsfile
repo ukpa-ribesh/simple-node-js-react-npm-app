@@ -27,7 +27,7 @@ pipeline {
     }
     post {
         always {
-            sh 'echo this is cicd branch'
+            sh 'echo this is cicd branch done manually'
         }
     }
 }
