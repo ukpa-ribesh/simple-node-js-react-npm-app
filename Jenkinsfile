@@ -25,4 +25,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            sh 'echo this is cicd branch'
+        }
+    }
 }
