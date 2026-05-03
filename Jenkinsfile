@@ -63,4 +63,6 @@ pipeline {
     post {
         always {
             sh 'echo This is cicd1 Branch'
+        }
+    }
 }
