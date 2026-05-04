@@ -29,6 +29,7 @@ pipeline {
         always {
             sh 'echo this is cicd branch done manually'
             sh 'echo Just testing'
+            sh 'echo Just Testing'
         }
     }
 }
